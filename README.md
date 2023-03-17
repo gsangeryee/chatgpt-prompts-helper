@@ -1,2 +1,33 @@
-# chatgpt-prompts-helper
-ChatGPT Prompts Helper is a handy Chrome extension designed to help users easily access a curated list of ChatGPT prompts. With a simple click, you can browse through various prompts organized by action type, copy them to your clipboard, and even add new prompts. Enhance your ChatGPT experience and boost productivity with this easy-to-use tool.
+# ChatGPT Prompts Helper
+
+A Google Chrome extension that provides a library of useful prompts for chat.openai.com, making it easier for users to interact with OpenAI's ChatGPT.
+
+## Features
+
+- Browse a library of curated prompts for ChatGPT
+- Copy prompts to the clipboard with a single click
+- Add custom prompts to the library
+- Pagination for easy browsing of prompts
+- Automatically fetches the latest prompts from a remote CSV file
+
+## Installation
+
+1. Download the extension from the [Google Chrome Web Store](https://chrome.google.com/webstore).
+2. After installation, click the extension icon in your browser's toolbar to open the popup.
+3. Browse and copy prompts.
+
+## TODO
+
+1.  Add your own custom prompts.
+
+## Contributing
+
+Contributions are welcome! Please feel free to open an issue or submit a pull request for any bugs, improvements, or new features.
+
+## Acknowledgments
+
+- Special thanks to the [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) project for providing an excellent source of curated prompts for ChatGPT.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
