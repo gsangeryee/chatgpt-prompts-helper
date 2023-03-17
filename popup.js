@@ -45,7 +45,36 @@ function savePromptsToStorage(prompts) {
 }
 
 
+// Fetch prompts from the local CSV file
+async function fetchPrompts() {
+    try {
+        const prompts = await getPromptsFromStorage();
+        if (prompts && prompts.length > 0) {
+            return prompts;
+        }
+    } catch (error) {
+        console.error("Failed to get Prompts data from storage:", error);
+    }
 
+    const response = await fetch(chrome.runtime.getURL("prompts.csv"));
+
+    if (response.ok) {
+        const csvData = await response.text();
+        const prompts = parseCsv(csvData);
+        try {
+            await savePromptsToStorage(prompts);
+        } catch (error) {
+            console.error("Failed to save Prompts data to storage:", error);
+        }
+        return prompts;
+    } else {
+        throw new Error("Failed to fetch Prompts data");
+    }
+}
+
+
+/*
+* from github
 async function fetchPrompts() {
     try {
         const prompts = await getPromptsFromStorage();
@@ -72,8 +101,9 @@ async function fetchPrompts() {
     } else {
         throw new Error("Failed to fetch Prompts data");
     }
-}
+}*/
 
+/*
 // Parse the CSV file
 function parseCsv(csv) {
     const rows = csv.split('\n');
@@ -82,7 +112,25 @@ function parseCsv(csv) {
         return { act, prompt: prompt.substring(1) }; // delete the leading quote
     });
     return prompts;
+}*/
+
+// using PapaParse
+// skip the first row, which contains the headers
+// delete the leading quote
+function parseCsv(csv) {
+    const parsedData = Papa.parse(csv, {
+        header: true,
+        skipEmptyLines: true,
+    });
+
+    const prompts = parsedData.data.map((row) => ({
+        act: row.act,
+        prompt: row.prompt,
+    }));
+
+    return prompts;
 }
+
 
 // Display prompts in the popup
 function displayPrompts(prompts, page) {
