@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Prompts Library",
+  "version": "1.0",
+  "description": "Chrome extension for chat.openai.com to show a Prompts Library",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "https://github.com/gsangeryee/chatgpt-prompts-helper/blob/main/prompts.csv"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Prompts Library"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
