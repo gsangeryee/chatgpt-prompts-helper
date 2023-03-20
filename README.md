@@ -26,8 +26,6 @@ Contributions are welcome! Please feel free to open an issue or submit a pull re
 
 ## Acknowledgments
 
-- I am grateful to ChatGPT3.5, ChatGPT4 and GitHub Copilot for providing invaluable assistance in completing the maiority of my development tasks.
-- Special thanks to [OpenAI](https://openai.com/) for creating ChatGPT and making it available to the public.
 - Special thanks to the [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) project for providing an excellent source of curated prompts for ChatGPT.
 
 ## License
