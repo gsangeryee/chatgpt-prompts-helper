@@ -1,8 +1,12 @@
 # ChatGPT Prompts Helper
 
+![Chrome Web Store](icon.png)
+
 A Google Chrome extension that provides a library of useful prompts for chat.openai.com, making it easier for users to interact with OpenAI's ChatGPT.
 
 The story of the development of this extension is documented in [24 Hours ChatGPT·S1,E1](https://medium.com/@saneryee-studio/24-hours-chatgpt-s1-e1-7818e491563f)
+
+![ChatGPT Prompts Helper](chatGPT-prompts-library.gif)
 
 ## Features
 
