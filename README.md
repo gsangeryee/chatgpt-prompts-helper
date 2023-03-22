@@ -12,9 +12,7 @@ The story of the development of this extension is documented in [24 Hours ChatGP
 
 - Browse a library of curated prompts for ChatGPT
 - Copy prompts to the clipboard with a single click
-- Add custom prompts to the library
 - Pagination for easy browsing of prompts
-- Automatically fetches the latest prompts from a remote CSV file
 
 ## Installation
 
